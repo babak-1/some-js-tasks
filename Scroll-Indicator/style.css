@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: black;
+
+  section {
+    width: 40%;
+    text-align: center;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+
+    h1 {
+      font-size: 40px;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  section:first-child {
+    margin-top: 50px;
+  }
+}
+
+.scroll-indicator {
+  height: 5px;
+  width: calc(100% - 96px);
+  position: fixed;
+  top: 10px;
+  left: 3em;
+  border-radius: 3px;
+
+  .progress {
+    height: 100%;
+    width: 20%;
+    border-radius: 3px;
+    transition: width 0.1s;
+    background: linear-gradient(30deg, red, yellow);
+  }
+}
