@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: rgb(216, 9, 9);
+  --primary-color: rgb(210, 55, 55);
   --secondary-color: #e0e0e0;
 }
 
@@ -18,11 +18,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background: linear-gradient(
-    rgb(146, 146, 54),
-    rgb(201, 107, 107),
-    rgb(62, 62, 159)
-  );
+  background: linear-gradient(#ff3cac, #784ba0, #2b86c5);
 }
 
 .container {
@@ -45,6 +41,8 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
   z-index: -1;
 }
 
@@ -55,7 +53,7 @@ body {
   left: 0;
   transform: translateY(-50%);
   height: 4px;
-  width: 100%;
+  width: 0%;
   z-index: -1;
   transition: 0.4s ease;
 }
@@ -75,4 +73,24 @@ body {
 
 .circle.active {
   border-color: var(--primary-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 0;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
 }
