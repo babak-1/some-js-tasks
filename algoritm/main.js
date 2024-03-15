@@ -88,13 +88,23 @@ const resultZero =(num) =>{
     const array = [];
     for(let i=num%2!=0?0:1;i<num/2;i++){
       array.push(i);
-      if(i!=0)array.push(-i)
+      if(i!=0)array.unshift(-i)
 
     }
-    return array.sort((a,b)=>a-b)
+    return array
 }
 
-console.log(resultZero(7));
+console.log(resultZero(15));
+
+// 5) 434 => 4*3*4 = 48 , 4+3+4=11 =>48-11==37
+
+const numberOperation = (num) =>{
+    let array = Array.from(String(num))
+    multiNum = array.reduce((a,b)=>a*b, 1)
+    sumNum = array.reduce((a,b)=>parseInt(a)+parseInt(b),0)
+    return multiNum-sumNum;
+}
+console.log(numberOperation(434));
 
 
 
