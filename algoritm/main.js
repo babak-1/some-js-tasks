@@ -82,6 +82,21 @@ function giveMeDoubleDigit(arr){
 
 console.log(giveMeDoubleDigit([100,200,101,15,18,21,22,334,2222]));
 
+// 4) 5 => 5 elementli array duzelt,elementlerin cemi 0 olsun
+
+const resultZero =(num) =>{
+    const array = [];
+    for(let i=num%2!=0?0:1;i<num/2;i++){
+      array.push(i);
+      if(i!=0)array.push(-i)
+
+    }
+    return array.sort((a,b)=>a-b)
+}
+
+console.log(resultZero(7));
+
+
 
 
 
