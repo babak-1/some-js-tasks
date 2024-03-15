@@ -74,8 +74,13 @@ function negativeNumberAlt(arr){
 console.log(negativeNumberAlt([[4,3,2,-1],[3,-2,-1,6],[5,-4,0,-1]]));
 
 
+// 3) [100,200,101,15,18] => cutreqemli ededlerin sayi 3
 
+function giveMeDoubleDigit(arr){
+   return arr.filter(e=>e.toString().length%2==0).length
+}
 
+console.log(giveMeDoubleDigit([100,200,101,15,18,21,22,334,2222]));
 
 
 
