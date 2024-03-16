@@ -107,6 +107,42 @@ const numberOperation = (num) =>{
 console.log(numberOperation(434));
 
 
+// 6) nums = [1,2,3,4,4,3,2,1] n=4  =>[1,4,2,3,3,2,4,1] 
+
+const arrayAndNum =(arr,num) =>{
+    const array =[]
+    for(let i=0; i<arr.length/2; i++){
+        array.push(arr[i])
+        array.push(arr[i+num])
+    }
+
+    return array;
+}
+
+console.log(arrayAndNum([1,2,3,4,4,3,2,1],2));
+
+
+
+// 7) input : [-2,1,-3,4,-1,2,1,-5,4] => -4   (her reqemden yalniz bir dene ola biler ve onlar toplanir.)
+
+const uniqueArraySum = (arr) =>{
+    for(let i=0; i<arr.length-1; i++){
+        for(let j=i+1; j<arr.length; j++){
+            if(arr[i]==arr[j]){
+                 arr.splice(j, 1);
+            }
+        }
+
+    }
+
+    return  arr.reduce((a,b) =>a+b,0)
+
+}
+
+console.log(uniqueArraySum([-2,1,-3,4,-1,2,1,-5,4]));
+
+
+
 
 
 
